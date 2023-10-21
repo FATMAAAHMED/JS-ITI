@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div img{
+            width: 200px;
+            height: 200px;
+            opacity: 1;
+        }
+        #marple{
+            position: relative; 
+            left: 30%;
+        } 
+        #marple img{
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <form action="index2.html">
+        <input type="text" name="user name" value="enter your name">
+        <input type="text" name="password">
+        <button >login</button>
+    </form>
+    <button onclick="openNewWin()">show message</button>
+    <div>
+        <img src="shuffle-02.jpg"  onmouseover="decreaseOpacity(0)" onmouseout="resetOpacit(0)">
+        <img src="shuffle-03.jpg" onmouseover="decreaseOpacity(1)" onmouseout="resetOpacit(1)">
+        <img src="shuffle-04.jpg" onmouseover="decreaseOpacity(2)" onmouseout="resetOpacit(2)">
+        <img src="shuffle-08.jpg" onmouseover="decreaseOpacity(3)" onmouseout="resetOpacit(3)">
+    </div>
+
+
+
+
+
+    <!-- <div id="marple" onmouseover="marpble()" onmouseout="nomarble()">
+        <img src="marble1.jpg">
+        <img src="marble1.jpg">
+        <img src="marble1.jpg">
+        <img src="marble1.jpg">
+        <img src="marble1.jpg" >
+
+    </div> -->
+    <script src="index.js"></script>
+</body>
+</html>

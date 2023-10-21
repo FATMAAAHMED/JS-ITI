@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index2</title>
+</head>
+<body>
+    <h1></h1>
+    <script>
+        var msg=document.getElementsByTagName("h1")[0]
+        var splittedStr =location.search.split("&")[0].split("=")[1]
+        msg.innerHTML= "welcom "+splittedStr ;
+    </script>
+</body>
+</html>

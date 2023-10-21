@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form</title>
+</head> 
+<body>
+    <form action="registered.html">
+        <input type="text" name="uName"
+        onfocus="changeStyle(this)" 
+        onblur="removeBorder(this)"
+        oninput="validateName(this)"
+        placeholder="enter full name" required>
+        <span></span>
+        <input type="email" placeholder="email" required>
+        <select name="city" >
+            <option disabled selected>please select your city</option>
+            <option value="1">qena</option>
+            <option value="2">cairo</option>
+            <option value="3">alex</option>
+        </select>
+        <input type="text" placeholder="password" oninput="getpass(this)" required>
+        <input type="text" placeholder="repeat password" required  onblur="validatePassword(this)">
+        <span></span>
+        <input type="checkbox"><label>I accept the terms and conditions</label>
+        <button type="submit">register</button>
+    </form>
+    <script>
+        function changeStyle(elm){
+            elm.style.outline ="solid 1px blue"
+        }
+        function removeBorder(elm){
+            elm.style.border="transparent"
+            elm.style.outline="transparent"
+        }
+        //validate name
+        var nameReg= /^[a-z]{4,}$/i
+        function validateName(inp){
+        var name = inp.value
+        if (nameReg.test(name)){
+            var msg = document.querySelectorAll("span")[0].innerHTML=""
+            inp.style.backgroundColor= "white"
+        }
+        else{
+            document.querySelectorAll("span")[0].style.color="red"
+            var msg = document.querySelectorAll("span")[0].innerHTML="invalid name"
+            inp.style.backgroundColor= "gray"
+        
+        }
+
+        }
+
+        //validate password 
+        var pass1
+        function getpass(inp2){
+            pass1 =inp2.value
+        }
+        
+        function validatePassword(pass){
+            if (pass.value!=pass1)
+            {
+                document.querySelectorAll("span")[1].style.color="red"
+                var msg2 = document.querySelectorAll("span")[1].innerHTML="password  and  repeat  password  should  be  the same"
+                pass.style.backgroundColor='gray'
+            }
+            else
+            {
+            var msg = document.querySelectorAll("span")[1].innerHTML=""
+            pass.style.backgroundColor='white'
+            }
+
+        }
+        //registerd
+        
+
+
+    </script>
+</body>
+</html>
